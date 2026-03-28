@@ -1,59 +1,51 @@
 import { supabase } from '../../../supabase-client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 
 
 function LoginAdmin({ setUser }) {
 
 
-    const [isSignIn, setIsSignIn] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
-
+    const [error, setError] = useState('');
 
     const login = async (e) => {
         e.preventDefault();
-        if (isSignIn) {
-            const { error } = await supabase.auth.signUp({
-                email: email,
-                password: password
-            })
-            setIsSignIn(!isSignIn);
-            if (error) {
-                console.error("Error Signing Up :", error.message)
-            }
+        setError('');
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email,
+            password
+        });
+
+        if (error) {
+            setError("Wrong email or password!");
         } else {
-            const { error } = await supabase.auth.signInWithPassword({
-                email: email,
-                password: password
-            })
-            setIsSignIn(isSignIn);
-            if (error) {
-                console.error("Error Signing In :", error.message)
-            }
+            setUser(data.user);
         }
-
-    }
-
-
-    // useEffect(() => {
-    //     supabase.auth.getUser().then(({ data }) => {
-    //         setUser(data.user);
-    //     });
-
-    // }, []);
+    };
 
     return (
-        <>
-            <form className='contact-section' onSubmit={login}>
-                <input type="text" placeholder='Email...' onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" placeholder='Password...' onChange={(e) => setPassword(e.target.value)} />
-                <button type='submit'>Login</button>
+        <form className='contact-section' onSubmit={login}>
+            <h2>Admin Login</h2>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+            <input
+                type="email"
+                placeholder='Email...'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+                type="password"
+                placeholder='Password...'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type='submit'>Login</button>
+        </form>
+    );
 
-            </form>
-        </>
-    )
 }
 
 export default LoginAdmin

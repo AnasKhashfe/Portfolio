@@ -3,18 +3,26 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { supabase } from '../../../../supabase-client';
 import './Footer.css'
-
+const ADMIN_USER_ID = "4ee4cb21-6e82-4dd0-b680-ced26b2321d1";
 
 function Footer() {
-    // const [user, setUser] = useState(null);
-    // const userId = "83eb91f9-ca68-4a5b-8c22-a35b4f9e4d0c";
-    // useEffect(() => {
-    //     supabase.auth.getUser().then(({ data }) => {
-    //         setUser(data.user);
+    const [isAdmin, setIsAdmin] = useState(false);
 
-    //     });
+    useEffect(() => {
+        const { data: listener } = supabase.auth.onAuthStateChange(
+            (event, session) => {
+                const currentUser = session?.user || null;
+                setIsAdmin(currentUser?.id === ADMIN_USER_ID);
+            }
+        );
 
-    // }, []);
+        supabase.auth.getUser().then(({ data }) => {
+            setIsAdmin(data.user?.id === ADMIN_USER_ID);
+        });
+
+        return () => listener.subscription.unsubscribe();
+    }, []);
+
 
 
     return (
@@ -23,10 +31,15 @@ function Footer() {
                 <div className="footer-left">
                     <h2 href='#' className='my-logo'>A<span>K</span></h2>
                     <p>Front-End Web Developer based in Syria. Open to work and new opportunities</p>
-
-                    <Link to="/admin" className='admin-ref'>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2e6aca"><path d="M381-481q-41-41-41-99t41-99q41-41 99-41t99 41q41 41 41 99t-41 99q-41 41-99 41t-99-41Zm141.5-56.5Q540-555 540-580t-17.5-42.5Q505-640 480-640t-42.5 17.5Q420-605 420-580t17.5 42.5Q455-520 480-520t42.5-17.5ZM480-60 120-280v-400l360-220 360 220v400L480-60Zm0-93 147-91q-34-18-71.5-27t-75.5-9q-38 0-75.5 9T333-244l147 91ZM256-291q50-34 107-51.5T480-360q60 0 117 17.5T704-291l56-33v-311L480-806 200-635v311l56 33Zm224-189Z" /></svg>
-                    </Link>
+                    {
+                        isAdmin
+                        &&
+                        (
+                            <Link to="/admin" className='admin-ref'>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#2e6aca"><path d="M381-481q-41-41-41-99t41-99q41-41 99-41t99 41q41 41 41 99t-41 99q-41 41-99 41t-99-41Zm141.5-56.5Q540-555 540-580t-17.5-42.5Q505-640 480-640t-42.5 17.5Q420-605 420-580t17.5 42.5Q455-520 480-520t42.5-17.5ZM480-60 120-280v-400l360-220 360 220v400L480-60Zm0-93 147-91q-34-18-71.5-27t-75.5-9q-38 0-75.5 9T333-244l147 91ZM256-291q50-34 107-51.5T480-360q60 0 117 17.5T704-291l56-33v-311L480-806 200-635v311l56 33Zm224-189Z" /></svg>
+                            </Link>
+                        )
+                    }
 
 
 
