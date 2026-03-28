@@ -48,7 +48,7 @@ function HeroSection() {
                     </div>
                 </div>
                 <div className={`right-section ${isActive ? 'active' : ''}`}>
-                    <img src="/images/me5.jpg" />
+                    <img src="/images/me7.jpg" />
                 </div>
             </section>
 
