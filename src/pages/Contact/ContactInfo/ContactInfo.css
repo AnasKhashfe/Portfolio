@@ -1,0 +1,34 @@
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.contacts-information {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.info {
+    display: flex;
+    gap: 15px;
+}
+
+.more-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+
+.contact-links {
+    width: 100%;
+    justify-content: flex-start;
+}

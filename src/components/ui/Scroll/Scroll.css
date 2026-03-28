@@ -1,0 +1,32 @@
+.arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 10px;
+    border-radius: 50%;
+    background-color: #4084f1;
+    border: none;
+    outline: none;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.arrow-up svg {
+    fill: var(--text-color);
+    width: 17px;
+    height: 17px;
+}
+
+.arrow-up.scrolled {
+    opacity: 1;
+    z-index: 1000;
+    cursor: pointer;
+
+}
+
+
+.arrow-up.scrolled:hover {
+    background-color: #2e6aca;
+}
+
+

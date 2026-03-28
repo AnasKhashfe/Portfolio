@@ -1,0 +1,115 @@
+.contact-form {
+    display: flex;
+    padding: 15px 18px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 50%;
+    border-radius: 6px;
+    background-color: var(--bg-color-secondary);
+    width: 80%;
+    margin: auto;
+
+}
+
+
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+
+}
+
+
+.flex input,
+textarea {
+    border: none;
+    outline: none;
+    padding: 14px 20px;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: 5px;
+    color: var(--text-color);
+}
+
+.flex input {
+    overflow: clip;
+}
+
+textarea {
+    min-height: 150px;
+    line-height: 1.3;
+    resize: vertical;
+}
+
+
+.flex input:focus,
+textarea:focus {
+    box-shadow: 0 2px 2px var(--text-secondary);
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.contact-form button {
+
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--more);
+    padding: 12px 18px;
+    border-radius: 12px;
+    color: var(--bg-color);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+}
+
+.contact-form button:hover {
+    scale: 1.05;
+
+    background-color: var(--bg-color);
+    color: var(--more-bold);
+}
+
+.success-send {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+
+.success-msg {
+    position: absolute;
+    bottom: 10%;
+    left: -40px;
+
+
+
+}
+
+
+@media (max-width:810px) {
+    .contact-form{
+        width: 100%;
+    }
+}

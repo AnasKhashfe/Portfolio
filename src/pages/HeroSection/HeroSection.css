@@ -1,0 +1,192 @@
+.hero-section {
+
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.left-section {
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform: translateX(-150%);
+}
+
+.left-section.active {
+    animation: transL 0.7s ease-out forwards;
+}
+
+@keyframes transL {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.left-section h4 {
+    color: var(--more-bold);
+    text-wrap: nowrap;
+}
+
+
+.left-section h1 {
+    font-size: 60px;
+    color: var(--text-heading);
+    font-family: 'Bebas Neue';
+}
+
+.left-section h1 span {
+    color: var(--more);
+    font-family: 'Bebas Neue';
+}
+
+.left-section p {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-secondary);
+
+}
+
+.left-section p:last-of-type {
+    font-size: 15px;
+
+}
+
+
+.links-btns {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.btns {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20%;
+
+}
+
+
+.btns a {
+    text-wrap: nowrap;
+    padding: 10px 14px;
+    text-decoration: none;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--more);
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+
+
+.btns a:hover {
+    scale: 1.05;
+}
+
+.btns a:last-of-type {
+    background-color: transparent;
+    color: var(--text-heading);
+    border: 1px solid var(--text-heading);
+    ;
+}
+
+
+
+
+.right-section img {
+    width: 250px;
+    height: 250px;
+
+    border: 1px solid var(--shadow);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px var(--shadow);
+}
+
+
+
+.right-section {
+    transform: translateX(150%);
+}
+
+.right-section.active {
+    animation: transR 0.5s ease-out forwards;
+}
+
+@keyframes transR {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:950px) {
+    .hero-section {
+
+        flex-direction: column;
+        height: auto;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        padding-top: 120px;
+
+
+    }
+
+    .left-section {
+        justify-content: space-evenly;
+        align-items: center;
+        height: auto;
+        gap: 15px;
+    }
+
+    .links-btns {
+
+        flex-direction: column;
+    }
+
+    .btns,
+    .links {
+        justify-content: center;
+    }
+
+
+
+}
+
+@media (min-height:700px) and (max-height:1022px) {
+    .hero-section {
+        height: 80vh;
+        margin: 40px 20px 0;
+
+
+    }
+}

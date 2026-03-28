@@ -1,0 +1,204 @@
+.projects-section {
+
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.grid-projects {
+    margin: 40px 0;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+
+}
+
+
+.project {
+    min-height: 500px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px var(--text-secondary);
+    background-color: var(--card-bg);
+    transition: all 0.4s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+
+.project-img {
+    width: 100%;
+    min-height: 180px;
+    background-color: var(--more);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+}
+
+.project img {
+    width: 200px;
+    border-radius: 12px;
+    transition: scale 0.4s ease;
+}
+
+.project-img:hover img {
+    scale: 1.2;
+
+}
+
+.flex-texts {
+    min-height: 300px;
+    padding: 17px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.project-title {
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.discription {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.skills {
+    list-style: none;
+    font-size: 13px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    color: var(--more-bold);
+    background-color: var(--card-bg);
+    padding: 6px 8px;
+    text-align: center;
+    text-wrap: nowrap;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.git-hub-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--card-bg);
+    padding: 6px 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: var(--bg-color);
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+.git-hub-btn:hover span {
+    color: var(--bg-color);
+
+}
+
+.git-hub-btn:hover svg {
+    fill: var(--bg-color);
+}
+
+.git-hub-btn:hover {
+    background-color: var(--more);
+}
+
+.git-hub-btn span {
+    font-size: 13px;
+    font-weight: bold;
+
+}
+
+.git-hub-btn svg {
+    width: 20px;
+
+}
+
+
+.show-more-btn {
+    background-color: var(--more);
+    color: var(--text-color);
+    padding: 10px 14px;
+    border-radius: 10px;
+    width: 280px;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+
+.show-more-btn:hover {
+    box-shadow: 0 4px 12px var(--more-bold);
+}
+
+
+.btns-git {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+
+
+.btns-git button {
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: transparent ;
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+
+
+}
+.btns-git button:hover {
+    background-color: red;
+
+
+}
+
+
+
+
+.add-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+@media(max-width:690px) {
+    .grid-projects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media((min-width:690px) and (max-width:950px)) {
+    .grid-projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

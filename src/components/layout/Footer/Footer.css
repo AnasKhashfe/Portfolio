@@ -1,0 +1,39 @@
+.footer-section {
+
+    width: 100%;
+    padding: 50px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background-color: var(--more-bold);
+}
+
+.footer-left {
+    max-width: 500px;
+
+}
+
+
+
+
+.footer-left p {
+    line-height: 1.4;
+    margin-top: 10px;
+    font-size: 13px;
+
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.copy-right {
+    color: var(--text-secondary);
+    font-size: 12px;
+
+}

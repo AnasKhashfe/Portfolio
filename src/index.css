@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* --left-main: #191970; */
+    --bg-color: #e6f0f8;
+    --bg-color-secondary: #fbfdff;
+    --text-color: #272427;
+    --text-secondary: hsl(213, 17%, 49%);
+    --text-heading: #191970;
+    --card-bg: rgba(230, 240, 248, 0.5);
+    --shadow: rgba(0, 0, 0, 0.5);
+    --more: #2e6aca;
+    --more-bold: #114497;/*#114497*/
+    --skill-hover: black;
+    --skill-color: rgb(69, 69, 77);
+    --skill-border: rgba(82, 82, 92, 0.418);
+}
+
+[data-theme="dark"] {
+    /* --left-main: #191970 ; */
+    --bg-color: #0f1117;
+    --bg-color-secondary: #1a1d27;
+    --text-color: #e6f0f8;
+    --text-secondary: #8ba3c7;
+    --text-heading: #c8d8ed;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --shadow: rgba(0, 0, 0, 0.8);
+    --more: #2e6aca;
+    --more-bold: #114497;
+    --skill-hover: #e6f0f8;
+    --skill-color: #a0aec0;
+    --skill-border: rgba(160, 174, 192, 0.25);
+}
+
+
+
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    font-family: 'Roboto';
+    word-break:keep-all;
+}
+
+
+body {
+    background-color: var(--bg-color);
+    /* background-color:#f4f4ec ; */
+    /* background-color: #fbfcf6; */
+    /* background-color: #f0eeea; */
+    /* background-color: #edf1fe; */
+    position: relative;
+
+
+}
+
+/*Header text transition on hover*/
+
+.main-text {
+    position: relative;
+}
+
+.main-text::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 3rem;
+    border-radius: 10px;
+    height: 4px;
+    background-color: var(--more);
+
+}
+
+/*Control the space between sections*/
+
+section {
+    padding: 50px 40px;
+    scroll-margin-top: 90px;
+
+}
+
+.section-description {
+    max-width: 600px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/*share links github , linkedin and messages from gmail to all sections */
+
+.links a svg ,
+.contact-links svg{
+    width: 23px;
+    /* filter: invert(1); */
+    transition: all 0.3s ease;
+    fill: var(--text-color);
+
+}
+
+.links,.contact-links  {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10%;
+}
+
+
+
+.links a svg:hover ,
+.contact-links svg:hover {
+    transform: rotate(10deg);
+    scale: 1.2;
+
+}
+
+
+/*Header and Footer logo*/
+.my-logo ,
+.my-logo span{
+    
+    font-size: 30px;
+    text-decoration: none;
+    color: var(--text-heading) ;
+    /* background: linear-gradient(90deg,
+            #4084f1,
+            #011f53,
+            #4084f1); */
+    /* background-size: 300% auto;
+    -webkit-background-clip: text;
+    background-clip: text; */
+
+    /* -webkit-text-fill-color: transparent; */
+    /* animation: wave 1.5s linear infinite; */
+    font-family: 'Bebas Neue';
+    font-weight: bold;
+
+}
+
+.my-logo span {
+    color: var(--more);
+}

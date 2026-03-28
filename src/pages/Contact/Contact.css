@@ -1,0 +1,35 @@
+
+.contact-section {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    align-content: center;
+
+}
+
+.bottom-s {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+::placeholder {
+    color: var(--text-secondary);
+    font-size: 12px;
+}
+
+
+@media(max-width:810px) {
+
+    .bottom-s {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+}
