@@ -23,12 +23,12 @@ function Admin() {
     }, []);
 
 
-    useEffect(() => {
-        if (!loading &&!user) {
-            navigate("/");
+    // useEffect(() => {
+    //     if (!loading &&!user) {
+    //         navigate("/");
 
-        }
-    }, [user,loading])
+    //     }
+    // }, [user,loading])
 
 
     return (

@@ -37,12 +37,12 @@ function LoginAdmin({ setUser }) {
     }
 
 
-    useEffect(() => {
-        supabase.auth.getUser().then(({ data }) => {
-            setUser(data.user);
-        });
+    // useEffect(() => {
+    //     supabase.auth.getUser().then(({ data }) => {
+    //         setUser(data.user);
+    //     });
 
-    }, []);
+    // }, []);
 
     return (
         <>
