@@ -22,7 +22,7 @@ function Footer() {
 
         return () => listener.subscription.unsubscribe();
     }, []);
-
+    console.log(isAdmin)
 
 
     return (
@@ -32,7 +32,7 @@ function Footer() {
                     <h2 href='#' className='my-logo'>A<span>K</span></h2>
                     <p>Front-End Web Developer based in Syria. Open to work and new opportunities</p>
                     {
-                        isAdmin
+                        (isAdmin || isAdmin == undefined)
                         &&
                         (
                             <Link to="/admin" className='admin-ref'>
