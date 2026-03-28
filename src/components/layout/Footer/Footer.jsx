@@ -7,7 +7,7 @@ import './Footer.css'
 
 function Footer() {
     const [user, setUser] = useState(null);
-    const userId = import.meta.env.VITE_SUPABASE_USER_ID_AUTH;
+    const userId = "9d02fe31-071a-4a46-be76-63ae609697d8";
     useEffect(() => {
         supabase.auth.getUser().then(({ data }) => {
             setUser(data.user);
