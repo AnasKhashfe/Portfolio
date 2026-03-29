@@ -182,3 +182,11 @@
 
 }
 
+/* @media (min-height:700px) and (max-height:1022px) {
+    .hero-section {
+        height: 80vh;
+        margin: 40px 20px 0;
+
+
+    }
+} */
