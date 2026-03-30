@@ -19,7 +19,7 @@ function About() {
                     </div>
                     <p>Software engineering graduate with a passion for front-end development. I enjoy building clean, responsive web interfaces and I'm always looking to learn and grow</p>
                     <a href="/files/Anas_Khashfeh_CV.pdf" download="Anas-Khashfe-CV.pdf"
-                    className='download-cv'>
+                        className='download-cv'>
                         Download CV
                     </a>
 
