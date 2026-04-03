@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function ProjectFormAdmin({user}) {
 
-    const [newProject, setNewProject] = useState({ title: '', description: '', technologies: [], github_url: '' })
+    const [newProject, setNewProject] = useState({ title: '', description: '', technologies: [], github_url: '',website_url: '' });
     const [projectImage, setProjectImage] = useState(null);
 
 
@@ -54,6 +54,7 @@ function ProjectFormAdmin({user}) {
             description: '',
             technologies: [],
             github_url: '',
+            website_url: ''
         });
         setProjectImage(null);
 
@@ -79,6 +80,7 @@ function ProjectFormAdmin({user}) {
                     <textarea placeholder='add description...' className='add' onChange={(e) => setNewProject({ ...newProject, description: e.target.value })} />
                     <input type="text" className='add' placeholder='add technology...' onChange={(e) => setNewProject({ ...newProject, technologies: e.target.value.split(",") })} />
                     <input type="text" placeholder='add git hub URL...' className='add' onChange={(e) => setNewProject({ ...newProject, github_url: e.target.value })} />
+                    <input type="text" placeholder='add website URL...' className='add' onChange={(e) => setNewProject({ ...newProject, website_url: e.target.value })} />
                     <button type='submit' className='submit-btn'>Submit</button>
                 </div>
             </form>

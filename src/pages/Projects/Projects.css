@@ -162,25 +162,31 @@
 }
 
 
-.btns-git button {
-    color: var(--text-color);
-    padding: 4px 8px;
+.btns-git .website-btn{
+    padding: 2px 5px;
     border-radius: 12px;
     outline: none;
     border: none;
-    background-color: transparent ;
-    width: 100px;
+    width: 50px;
     cursor: pointer;
-    transition: all 0.4s ease;
-    text-decoration: none;
-
-
-}
-.btns-git button:hover {
-    background-color: red;
-
+    text-align: center;
+    background-color: var(--bg-color);
+    box-shadow: 0 2px 4px var(--text-secondary);
 
 }
+
+
+
+.btns-git .website-btn svg {
+    transition: all 0.3s ease;
+    fill: var(--text-color);
+}
+
+.btns-git .website-btn:hover svg {
+    
+    translate: 5px;
+}
+
 
 
 
@@ -190,6 +196,9 @@
     flex-direction: column;
     gap: 30px;
 }
+
+
+
 
 @media(max-width:690px) {
     .grid-projects {

@@ -6,7 +6,6 @@ import Projects from './pages/Projects/Projects';
 import Skills from './pages/Skills/Skills';
 import Contact from './pages/Contact/Contact';
 import Footer from './components/layout/Footer/Footer';
-import LoginAdmin from './pages/Admin/LoginAdmin';
 
 function Layout() {
 
@@ -19,6 +18,7 @@ function Layout() {
             <Projects />
             <Skills />
             <Contact />
+            
             <Footer/>
 
         </>

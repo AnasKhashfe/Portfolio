@@ -46,6 +46,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    pointer-events: none;
 }
 
 .custom-shape-divider-top-1774820529 svg {
@@ -67,6 +68,7 @@
     overflow: hidden;
     line-height: 0;
     transform: rotate(360deg);
+    pointer-events: none;
 }
 
 .custom-shape-divider-top-1774820530 svg {
